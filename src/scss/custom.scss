@@ -1,0 +1,61 @@
+$danger: #9c122b;
+$primary: #2f2569;
+$success: #ff8778;
+$secondary: #686869;
+$warning: #1e1e1e;
+$info: #5cb8ff;
+
+body{
+    font-family: "Aref Ruqaa Ink", serif!important;
+}
+.logo{
+    width: 250px;
+}
+.title{
+    font-size: 4rem;
+    font-weight: 1700;
+    color: $success;
+
+    text-align: center;
+}
+.navText{
+    font-size: 1rem;
+    font-weight: 1700;
+}
+.para{
+    background-color: $secondary;
+    opacity: .92;
+    color: $primary;
+    border-radius: 10rem;
+    font-size: 1.6rem;
+}
+.para_error{
+    background-color: $secondary;
+    opacity: .8;
+    color: $danger;
+    border-radius: 10rem;
+    font-size: 1.4rem;
+
+}
+.photo_404{
+    width: 25%;
+    object-fit: cover;
+    border-radius: 40%;
+}
+//responsive
+@media (max-width: 768px) {
+    .photo_404{
+        width: 100%;
+    }
+    .para_error{
+        border-radius: 1rem;
+    }
+}
+h2{
+    font-size: 50px!important;
+    color: $danger!important;
+    text-align: center;
+}
+.horaire{
+   margin: -10px!important;
+}
