@@ -8,38 +8,45 @@ export function Contact() {
     const MotifsData = await response.json();
     setMotifs(MotifsData);
   };
-  // On charge les motifs au chargement de la page
   useEffect(() => {
     getMotifs();
   }, []);
-  
-  // fetch("https://marsaud.onrender.com/Formulaires", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify(formData),
-  //   })
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       console.log("Success:", data);
-  
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error:", error);
-  //     });
-  // };
-
-  // let formData = {
-  //   Id_Motifs: document.getElementById("Id_Motifs").value,
-  //   nom: document.getElementById("nom").value,
-  //   prenom: document.getElementById("prenom").value,
-  //   mail: document.getElementById("mail").value,
-  //   telephone: document.getElementById("telephone").value,
-  //   message: document.getElementById("message").value,
-  // };
-  // console.log(formData);
-
+  // récupération du formulaire
+  const handleSudmit = (e) => {
+    e.preventDefault();
+    // console.log(e.target);
+    const form = e.target;
+    const elements = form.elements;
+    // console.log(elements);
+    // création d'un objet formData
+    let formData = {
+      Id_Motifs: elements.Id_Motifs.value,
+      nom: elements.nom.value,
+      prenom: elements.prenom.value,
+      mail: elements.mail.value,
+      telephone: elements.telephone.value,
+      message: elements.message.value,
+      Id_FormulairesOk: 1,     
+    };
+    // envoi des données au serveur
+    // console.log(formData);
+ fetch("https://marsaud.onrender.com/Formulaires", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+        
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+      form.reset();
+  };
   return (
     <>
       <div className="fluid row">
@@ -58,7 +65,7 @@ export function Contact() {
         <div className="p-2  d-lg-none"></div>
         <div className="p-5 para col-12 col-lg-8">
           <h2 className="  ">Formulaire</h2>
-          <form onSubmit=''>
+          <form onSubmit={handleSudmit}>
             <div className="row">
             <div className="col-12 col-lg-10 mx-auto">
                 <div className="form-group">

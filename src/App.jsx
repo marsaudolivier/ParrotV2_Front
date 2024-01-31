@@ -3,6 +3,8 @@ import { Footer } from "./components/Footer";
 import { WhoAreWe } from "./components/WhoAreWe";
 import { Services } from "./components/Services";
 import { Contact } from "./components/Contact";
+import { Avis } from "./components/Avis";
+import { Carte } from "./components/Carte";
 
 import "./index.css";
 import "./App.scss";
@@ -16,6 +18,8 @@ function App() {
           <WhoAreWe />
           <Services />
           <Contact />
+          <Avis />
+          <Carte />
         </article>
       </body>
       <Footer />
