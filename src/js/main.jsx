@@ -4,6 +4,8 @@ import App from '../App.jsx'
 import '../index.css'
 import ErrorPage from '../Routes/ErrorPage.jsx'
 import VentesPage from '../Routes/VentesPage.jsx'
+import MentionsPage from '../Routes/MentionsPage.jsx'
+import CookiePage from '../Routes/CookiePage.jsx'
 
 // import * as bootstrap from 'bootstrap'
 
@@ -18,6 +20,12 @@ const router = createBrowserRouter([
 },{
     path : "/Ventes",
     element : <VentesPage/>
+  },{
+    path : "/Mentions",
+    element : <MentionsPage/>
+  },{
+    path : "/Cookie",
+    element : <CookiePage/>
   }
   ])
 

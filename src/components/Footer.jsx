@@ -55,6 +55,22 @@ export function Footer() {
             </div>
           </div>
         </div>
+        <ul className="nav col-12  justify-content-evenly p-3">
+        <li className="nav-item">
+              <a
+                href="/mentions"
+                className="nav-link px-2 text-secondary"
+                aria-current="page"
+              >
+                Mentions Légales
+              </a>
+            </li>
+            <li className="nav-item">
+              <a href="/Cookie" className="nav-link text-secondary">
+                Politique de cookies
+              </a>
+            </li>
+          </ul>
       </div>
     </>
   );
