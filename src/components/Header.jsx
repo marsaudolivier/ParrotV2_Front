@@ -11,7 +11,7 @@ export function Header() {
                 className="nav-link px-2 text-secondary"
                 aria-current="page"
               >
-                Home
+                Acceuil
               </a>
             </li>
             <li className="nav-item">
