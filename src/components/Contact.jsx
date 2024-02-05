@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-
-export function Contact() {
+const location = window.location;
+export function Contact({ selectedAnnonceTitle }) {
   const [Motifs, setMotifs] = useState([]);
   const [selectedMotif, setSelectedMotif] = useState(1); // 1 = "Autre"
-  let olivier ='';
   const API_URL = "https://marsaud.onrender.com/Motifs";
   const getMotifs = async () => {
     const response = await fetch(API_URL);
@@ -15,7 +14,7 @@ export function Contact() {
   }, []);
   useEffect(() => {
     // Check if the current location is "http://localhost:5173/ventes"
-    if (location.pathname === "/ventes") {
+    if (window.location.pathname === "/ventes") {
       setSelectedMotif(4); // Set the default selectedMotif to 4
  
     }
@@ -26,6 +25,7 @@ export function Contact() {
     // console.log(e.target);
     const form = e.target;
     const elements = form.elements;
+    // console.log("titre: " + selectedAnnonceTitle )
     // console.log(elements);
     // création d'un objet formData
     let formData = {
@@ -35,7 +35,7 @@ export function Contact() {
       mail: elements.mail.value,
       telephone: elements.telephone.value,
       message: elements.message.value,
-      annonce: elements.olivier.value,
+      annonce: selectedAnnonceTitle,  
       Id_FormulairesOk: 1,     
     };
     // envoi des données au serveur

@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 export default function VentesPage() {
   
     const [Voitures, setVoitures] = useState([]);
+    const [selectedAnnonceTitle, setSelectedAnnonceTitle] = useState("");
     const API_URL = "https://marsaud.onrender.com/annonces";
     // The separate async function
     const getVoitures = async () => {
@@ -26,9 +27,9 @@ export default function VentesPage() {
       <Header />
       <article>
         <div className="p-3"></div>
-    <CardList  voitures={Voitures} />
+        <CardList voitures={Voitures} setSelectedAnnonceTitle={setSelectedAnnonceTitle} />
         <div className="p-3"></div>
-        <Contact />
+        <Contact selectedAnnonceTitle={selectedAnnonceTitle} />
         <Footer />
       </article>
     </div>

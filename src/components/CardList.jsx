@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 
-const CardList = ({ voitures }) => {
+const CardList = ({ voitures, setSelectedAnnonceTitle  }) => {
   const [Serv, setServ] = useState([]);
   const [Avoir, setAvoir] = useState([]);
   const [Conso, setConso] = useState([]);
   // Utilisez useState pour stocker les données du service
   const [isButtonClicked, setIsButtonClicked] = useState(false);
 
-  const handleMoreInfoClick = async (idAnnonces) => {
+  const handleMoreInfoClick = async (idAnnonces, titreAnnonce) => {
     console.log("clicked on service with id: " + idAnnonces);
     const API_URLServ = `https://marsaud.onrender.com/Annonces/voiture/${idAnnonces}`;
 
@@ -28,7 +28,7 @@ const CardList = ({ voitures }) => {
       const ConsoData = await responseConso.json();
       setConso(ConsoData);
       console.log(ConsoData);
-
+      setSelectedAnnonceTitle(titreAnnonce);
       setIsButtonClicked(true);
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -63,7 +63,7 @@ const CardList = ({ voitures }) => {
                   <button
                     type="button"
                     className="btn btn-dark"
-                    onClick={() => handleMoreInfoClick(voiture.Id_Voitures)}
+                    onClick={() => handleMoreInfoClick(voiture.Id_Voitures, voiture.titre)}
                   >
                     Plus d'info
                   </button>
