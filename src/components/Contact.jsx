@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 
 export function Contact() {
   const [Motifs, setMotifs] = useState([]);
+  const [selectedMotif, setSelectedMotif] = useState(1); // 1 = "Autre"
+  let olivier ='';
   const API_URL = "https://marsaud.onrender.com/Motifs";
   const getMotifs = async () => {
     const response = await fetch(API_URL);
@@ -11,6 +13,13 @@ export function Contact() {
   useEffect(() => {
     getMotifs();
   }, []);
+  useEffect(() => {
+    // Check if the current location is "http://localhost:5173/ventes"
+    if (location.pathname === "/ventes") {
+      setSelectedMotif(4); // Set the default selectedMotif to 4
+ 
+    }
+  }, [location.pathname]);
   // récupération du formulaire
   const handleSudmit = (e) => {
     e.preventDefault();
@@ -26,6 +35,7 @@ export function Contact() {
       mail: elements.mail.value,
       telephone: elements.telephone.value,
       message: elements.message.value,
+      annonce: elements.olivier.value,
       Id_FormulairesOk: 1,     
     };
     // envoi des données au serveur
@@ -70,11 +80,19 @@ export function Contact() {
             <div className="col-12 col-lg-10 mx-auto">
                 <div className="form-group">
                   <label htmlFor="motif">Motif</label>
-                  <select className="form-control" id="Id_Motifs">
-                    {Motifs.map((Motif) => (
-                      <option key={Motif.Id_Motifs} value={Motif.Id_Motifs}>{Motif.motif}</option>   
-                    ))}
-                  </select>
+                  <select
+        className="form-control"
+        id="Id_Motifs"
+        disabled={location.pathname === "/ventes"} 
+        value={selectedMotif} 
+        onChange={(e) => setSelectedMotif(e.target.value)} 
+      >
+        {Motifs.map((Motif) => (
+          <option key={Motif.Id_Motifs} value={Motif.Id_Motifs}>
+            {Motif.motif}
+          </option>
+        ))}
+      </select>
                 </div>
               </div>
               <div className="col-12 col-lg-5 mx-auto">
