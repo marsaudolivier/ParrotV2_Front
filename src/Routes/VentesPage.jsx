@@ -3,6 +3,9 @@ import { Footer } from "../components/Footer";
 import { CardList } from "../components/CardList";
 import { Contact } from "../components/Contact";
 import { useEffect, useState } from "react";
+import { RangeSliderKm } from "../components/RangeSliderKm";
+import { RangeSliderYears } from "../components/RangeSliderYears";
+import { RangeSliderPrice } from "../components/RangeSliderPrice";
 
 
 export default function VentesPage() {
@@ -25,7 +28,18 @@ export default function VentesPage() {
   return (
     <div>
       <Header />
-      <article>
+      <article className="p-3">
+        <div className="container card_vente p-2">
+          <h2>Filtre de véhicule</h2>
+          <div className="row p-5">
+            <RangeSliderKm />
+            <div className="col-12 col-md-1"></div>
+            <RangeSliderYears />
+            <div className="col-12 col-md-1"></div>
+            <RangeSliderPrice />
+          </div>
+        </div>
+      
         <div className="p-3"></div>
         <CardList voitures={Voitures} setSelectedAnnonceTitle={setSelectedAnnonceTitle} />
         <div className="p-3"></div>

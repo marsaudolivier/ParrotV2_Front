@@ -64,6 +64,12 @@ h3{
     color: $danger!important;
     text-align: center;
 }
+h4{
+    font-size: 20px!important;
+    color: $danger!important;
+    text-align: center;
+
+}
 .card_vente{
     border-radius: 50px!important;
     background-color: $secondary!important;
@@ -91,4 +97,7 @@ h3{
     object-fit: contain;
     border-radius: 40px!important;
     border: 3px solid $danger!important;
+}
+.test-slider{
+
 }
