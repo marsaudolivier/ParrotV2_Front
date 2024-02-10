@@ -15,12 +15,12 @@ export function Header() {
               </a>
             </li>
             <li className="nav-item">
-              <a href="/ventes" className="nav-link text-secondary">
+              <a href="./ventes" className="nav-link text-secondary">
                 Ventes
               </a>
             </li>
             <li className="nav-item">
-              <a href="/Login" className="nav-link text-secondary">
+              <a href="./Login" className="nav-link text-secondary">
                 Administration du site
               </a>
             </li>
