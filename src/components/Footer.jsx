@@ -54,7 +54,7 @@ export function Footer() {
               <p>TOULOUSE 05 46 00 00 00</p>
             </div>
           </div>
-        </div>
+        </div> 
         <ul className="nav col-12  justify-content-evenly p-3">
         <li className="nav-item">
               <a
