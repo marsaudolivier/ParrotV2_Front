@@ -1,7 +1,7 @@
 article {
   margin: 0;
   padding: 0;
-  background-image: url("./src/assets/images/fond3.jpg");
+  background-image: url("../public/fond3.jpg");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -9,7 +9,7 @@ article {
 @media screen and (max-width: 768px) {
   /* Styles spécifiques pour les écrans ayant une largeur maximale de 768 pixels (ajustez selon vos besoins) */
   article {
-    background-image: url("./src/assets/images/fond2.jpg");
+    background-image: url("../public/fond2.jpg");
     background-size: contain;
     background-attachment: fixed; /* Pour permettre le défilement de l'image sur mobile */
   }
