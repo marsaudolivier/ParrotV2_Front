@@ -5,10 +5,8 @@ import { Services } from "./components/Services";
 import { Contact } from "./components/Contact";
 import { Avis } from "./components/Avis";
 import { Carte } from "./components/Carte";
-
 import "./index.css";
 import "./App.scss";
-
 function App() {
   return (
     <>

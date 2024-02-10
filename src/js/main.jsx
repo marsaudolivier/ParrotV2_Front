@@ -1,4 +1,3 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from '../App.jsx'
 import '../index.css'
@@ -9,6 +8,7 @@ import CookiePage from '../Routes/CookiePage.jsx'
 import LoginPage from '../Routes/LoginPage.jsx'
 import AdminPage from '../Routes/AdminPage.jsx'
 import EmployePage from '../Routes/EmployePage.jsx'
+
 
 // import * as bootstrap from 'bootstrap'
 
