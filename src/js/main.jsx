@@ -13,7 +13,6 @@ import EmployePage from '../Routes/EmployePage.jsx'
 // import * as bootstrap from 'bootstrap'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { element } from 'prop-types'
 
 const router = createBrowserRouter([
 
@@ -52,7 +51,5 @@ const router = createBrowserRouter([
 const root  = ReactDOM.createRoot(document.getElementById('root'))
 
 root.render(
-	<React.StrictMode>
 		<RouterProvider router={router}/>
-	</React.StrictMode>
 )
