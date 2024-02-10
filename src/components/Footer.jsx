@@ -36,13 +36,13 @@ export function Footer() {
           <div className="p-2  d-md-none"></div>
           <div className="col-12 col-md-4 align-self-center text-center">
             <a href="https:/www.facebook.com" className="p-2">
-                <img src="../public/facebook.svg" alt="Facebook " width='50'/>
+                <img src="/facebook.svg" alt="Facebook " width='50'/>
                 </a>
                 <a href="https:/www.instagram.com"className="p-2">
-                <img src="public/instagram.svg" alt="Instagram " width='50'/>
+                <img src="/instagram.svg" alt="Instagram " width='50'/>
                 </a>
                 <a href="https:/www.twitter.com" className="p-2">
-                <img src="./public/twitter.svg" alt="Twitter" width='50'/>
+                <img src="/twitter.svg" alt="Twitter" width='50'/>
                 </a>
           </div>
           <div className="p-2  d-md-none"></div>
