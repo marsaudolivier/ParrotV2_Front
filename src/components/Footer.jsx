@@ -39,7 +39,7 @@ export function Footer() {
                 <img src="../public/facebook.svg" alt="Facebook " width='50'/>
                 </a>
                 <a href="https:/www.instagram.com"className="p-2">
-                <img src=".../public/instagram.svg" alt="Instagram " width='50'/>
+                <img src="public/instagram.svg" alt="Instagram " width='50'/>
                 </a>
                 <a href="https:/www.twitter.com" className="p-2">
                 <img src="./public/twitter.svg" alt="Twitter" width='50'/>
