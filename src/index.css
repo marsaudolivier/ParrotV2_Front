@@ -1,7 +1,7 @@
 article {
   margin: 0;
   padding: 0;
-  background-image: url("../public/fond3.jpg");
+  background-image: url("fond3.jpg");
   background-size: cover;
   background-attachment: fixed;
 }
