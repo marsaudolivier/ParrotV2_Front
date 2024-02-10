@@ -5,99 +5,119 @@ $secondary: #686869;
 $warning: #1e1e1e;
 $info: #5cb8ff;
 
-body{
-    font-family: "Aref Ruqaa Ink", serif!important;
+body {
+  font-family: "Aref Ruqaa Ink", serif !important;
 }
-.logo{
-    width: 250px;
+.logo {
+  width: 250px;
 }
-.title{
-    font-size: 4rem;
-    font-weight: 1700;
-    color: $success;
+.title {
+  font-size: 4rem;
+  font-weight: 1700;
+  color: $success;
 
-    text-align: center;
+  text-align: center;
 }
-.navText{
-    font-size: 1rem;
-    font-weight: 1700;
+.navText {
+  font-size: 1rem;
+  font-weight: 1700;
 }
-.para{
-    background-color: $secondary;
-    opacity: .92;
-    color: $primary;
-    border-radius: 10rem;
-    font-size: 1.6rem;
+.para {
+  background-color: $secondary;
+  opacity: 0.92;
+  color: $primary;
+  border-radius: 10rem;
+  font-size: 1.6rem;
 }
-.para_error{
-    background-color: $secondary;
-    opacity: .8;
-    color: $danger;
-    border-radius: 10rem;
-    font-size: 1.4rem;
-
+.para_error {
+  background-color: $secondary;
+  opacity: 0.8;
+  color: $danger;
+  border-radius: 10rem;
+  font-size: 1.4rem;
 }
-.photo_404{
-    width: 25%;
-    object-fit: cover;
-    border-radius: 40%;
+.photo_404 {
+  width: 25%;
+  object-fit: cover;
+  border-radius: 40%;
 }
 //responsive
 @media (max-width: 768px) {
-    .photo_404{
-        width: 100%;
-    }
-    .para_error{
-        border-radius: 1rem;
-    }
+  .photo_404 {
+    width: 100%;
+  }
+  .para_error {
+    border-radius: 1rem;
+  }
 }
-h2{
-    font-size: 50px!important;
-    color: $danger!important;
-    text-align: center;
+h2 {
+  font-size: 50px !important;
+  color: $danger !important;
+  text-align: center;
 }
-.horaire{
-   margin: -10px!important;
+.horaire {
+  margin: -10px !important;
 }
-h3{
-    font-size: 30px!important;
-    color: $danger!important;
-    text-align: center;
+h3 {
+  font-size: 30px !important;
+  color: $danger !important;
+  text-align: center;
 }
-h4{
-    font-size: 20px!important;
-    color: $danger!important;
-    text-align: center;
+h4 {
+  font-size: 20px !important;
+  color: $danger !important;
+  text-align: center;
+}
+.card_vente {
+  border-radius: 50px !important;
+  background-color: $secondary !important;
+  opacity: 0.92;
+  color: $primary !important;
+  border: 1px solid $danger !important;
+  font-size: 1.4rem;
+}
+.card_detail {
+  border-radius: 50px !important;
+  color: $primary !important;
+  border: 1px solid $danger !important;
+  font-size: 1.5rem;
+}
+.Vente_Photo {
+  height: 200px;
+  width: 320px;
+  object-fit: cover;
+  border-radius: 40px !important;
+  border: 3px solid $danger !important;
+}
+.Vente_PhotoDetail {
+  height: 400px;
+  width: 400px;
+  object-fit: contain;
+  border-radius: 40px !important;
+  border: 3px solid $danger !important;
+}
 
+body {
+  background-color: $secondary !important;
 }
-.card_vente{
-    border-radius: 50px!important;
-    background-color: $secondary!important;
-    opacity: .92;
-    color: $primary!important;
-    border: 1px solid $danger!important;
-    font-size: 1.4rem;
+.btn-outline-danger {
+  --bs-btn-color: #ff8778;
+  --bs-btn-border-color: #ff8778;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #ff8778;
+  --bs-btn-hover-border-color: #ff8778;
+  --bs-btn-focus-shadow-rgb: 220, 53, 69;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #ff8778;
+  --bs-btn-active-border-color: #ff8778;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #ff8778;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #ff8778;
+  --bs-gradient: none;
 }
-.card_detail{
-    border-radius: 50px!important;
-    color: $primary!important;
-    border: 1px solid $danger!important;
-    font-size: 1.5rem;
-}
-.Vente_Photo{
-    height: 200px;
-    width: 320px;
-    object-fit: cover;
-    border-radius: 40px!important;
-    border: 3px solid $danger!important;
-}
-.Vente_PhotoDetail{
-    height: 400px;
-    width: 400px;
-    object-fit: contain;
-    border-radius: 40px!important;
-    border: 3px solid $danger!important;
-}
-.test-slider{
-
+.table {
+  --bs-table-color: #2f2569;
+  --bs-table-bg: #686869;
+  border-color: #2f2569;
 }

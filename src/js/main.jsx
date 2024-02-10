@@ -6,10 +6,14 @@ import ErrorPage from '../Routes/ErrorPage.jsx'
 import VentesPage from '../Routes/VentesPage.jsx'
 import MentionsPage from '../Routes/MentionsPage.jsx'
 import CookiePage from '../Routes/CookiePage.jsx'
+import LoginPage from '../Routes/LoginPage.jsx'
+import AdminPage from '../Routes/AdminPage.jsx'
+import EmployePage from '../Routes/EmployePage.jsx'
 
 // import * as bootstrap from 'bootstrap'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { element } from 'prop-types'
 
 const router = createBrowserRouter([
 
@@ -26,7 +30,23 @@ const router = createBrowserRouter([
   },{
     path : "/Cookie",
     element : <CookiePage/>
-  }
+  },
+  {
+    path : "/Login",
+    element : <LoginPage/>
+  },//dashbord admin si role= admin
+  {
+    path : "/Admin",
+    element : <AdminPage/>
+  },
+  {
+    path : "/Employe",
+    element : <EmployePage/>
+  },
+  
+
+
+
   ])
 
 const root  = ReactDOM.createRoot(document.getElementById('root'))

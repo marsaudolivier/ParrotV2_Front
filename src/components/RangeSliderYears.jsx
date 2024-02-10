@@ -3,16 +3,16 @@
 import React, { useState } from "react";
 import Slider from "react-slider";
 
-export function RangeSliderYears() {
+export function RangeSliderYears({ onChange }) {
   const [rangeValues, setRangeValues] = useState([1950, 2024]);
 
   const handleRangeChange = (values) => {
     setRangeValues(values);
-    console.log(values);
+    onChange(values);
   };
   return ( 
         <div className="col-12 col-md-3">
-          <div className="p-5 text-danger card_vente">
+          <div className="p-2 text-danger card_vente">
           <h4>Année :</h4>
             <Slider
               min={1950}
@@ -52,7 +52,7 @@ export function RangeSliderYears() {
                     // eslint-disable-next-line react/prop-types
                     ...props.style,
                     background: "#2f2569",
-                    height: "8px",
+                    height: "7px",
                     width: `${
                       ((rangeValues[1] - rangeValues[0]) / (2024 - 1950)) * 100
                     }%`,

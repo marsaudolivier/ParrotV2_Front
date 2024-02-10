@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
 import Slider from "react-slider";
 
-export function RangeSliderKm() {
+
+export function RangeSliderKm({ onChange }) {
   const [rangeValues, setRangeValues] = useState([0, 350000]);
   const [initialized, setInitialized] = useState(false);
 
   const handleRangeChange = (values) => {
     setRangeValues(values);
-    console.log(values);
+    // Appel de la fonction de rappel pour propager les changements à votre composant parent
+    onChange(values);
   };
 
   useEffect(() => {
@@ -18,7 +20,7 @@ export function RangeSliderKm() {
   return (
     initialized && (
       <div className="col-12 col-md-3">
-        <div className="p-5 text-danger card_vente">
+        <div className="p-2 text-danger card_vente">
           <h4>Km :</h4>
           <Slider
             min={0}

@@ -20,7 +20,7 @@ export function Header() {
               </a>
             </li>
             <li className="nav-item">
-              <a href="/admin" className="nav-link text-secondary">
+              <a href="/Login" className="nav-link text-secondary">
                 Administration du site
               </a>
             </li>
