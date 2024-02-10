@@ -7,9 +7,21 @@ import { Avis } from "./components/Avis";
 import { Carte } from "./components/Carte";
 import "./index.css";
 import "./App.scss";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import MentionsPage from './Routes/MentionsPage';
+
+
 function App() {
   return (
     <>
+   <Router>
+      <Switch>
+        <Route path="/" component={App} />
+        <Route exact path="/mentions" component={MentionsPage}/>
+        {/* Ajoutez d'autres routes selon vos besoins */}
+      </Switch>
+    </Router>
+
       <Header />
       <body>
         <article>
@@ -24,5 +36,5 @@ function App() {
     </>
   );
 }
-
 export default App;
+
