@@ -58,7 +58,7 @@ export function Footer() {
         <ul className="nav col-12  justify-content-evenly p-3">
         <li className="nav-item">
               <a
-                href="/mentions"
+                href="/Mentions"
                 className="nav-link px-2 text-secondary"
                 aria-current="page"
               >
