@@ -15,7 +15,7 @@ export function Header() {
               </a>
             </li>
             <li className="nav-item">
-              <a href="./ventes" className="nav-link text-secondary">
+              <a href="./Ventes" className="nav-link text-secondary">
                 Ventes
               </a>
             </li>
