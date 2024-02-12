@@ -18,7 +18,6 @@ const AppRoutes = () => {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/admin" element={<AdminPage />} />
         <Route path="/employe" element={<EmployePage />} /> 
-**
     </Routes>
        
     );
