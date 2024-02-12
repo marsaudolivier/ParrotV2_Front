@@ -58,7 +58,7 @@ export function Footer() {
         <ul className="nav col-12  justify-content-evenly p-3">
         <li className="nav-item">
               <a
-                href="/Mentions"
+                href="/mentions"
                 className="nav-link px-2 text-secondary"
                 aria-current="page"
               >
@@ -66,7 +66,7 @@ export function Footer() {
               </a>
             </li>
             <li className="nav-item">
-              <a href="/Cookie" className="nav-link text-secondary">
+              <a href="/cookie" className="nav-link text-secondary">
                 Politique de cookies
               </a>
             </li>

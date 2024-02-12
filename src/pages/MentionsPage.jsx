@@ -1,12 +1,8 @@
-import { useRouteError } from "react-router-dom";
+
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 
 export default function MentionsPage() {
-  const error = useRouteError();
-
-  console.log(error);
-
   return (
     <>
       <Header />
@@ -87,8 +83,9 @@ export default function MentionsPage() {
           </p>
         </div>
         <div className="p-3"></div>
-        <Footer />
-      </article>
+      
+      </article> 
+       <Footer />
     </>
   );
 }
