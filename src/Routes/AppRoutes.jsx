@@ -1,13 +1,13 @@
 import { Routes, Route } from 'react-router-dom';
 
-import ErrorPage from '../pages/ErrorPage'
-import VentesPage from '../pages/VentesPage';
-import MentionsPage from '../pages/MentionsPage';
-import CookiePage from '../pages/CookiePage';
-import LoginPage from '../pages/LoginPage';
-import AdminPage from '../pages/AdminPage';
-import EmployePage from '../pages/EmployePage';
-import IndexPage from '../pages/IndexPage';
+import ErrorPage from '../Pages/ErrorPage'
+import VentesPage from '../Pages/VentesPage';
+import MentionsPage from '../Pages/MentionsPage';
+import CookiePage from '../Pages/CookiePage';
+import LoginPage from '../Pages/LoginPage';
+import AdminPage from '../Pages/AdminPage';
+import EmployePage from '../Pages/EmployePage';
+import IndexPage from '../Pages/IndexPage';
 
 const AppRoutes = () => {
     return (
