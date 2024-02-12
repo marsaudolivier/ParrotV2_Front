@@ -2,7 +2,7 @@
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 
-export default function MentionsPage() {
+export default function CookiePage() {
 
   return (
     <div>
@@ -46,3 +46,4 @@ export default function MentionsPage() {
     </div>
   );
 }
+

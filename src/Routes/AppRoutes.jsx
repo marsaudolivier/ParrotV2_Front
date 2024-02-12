@@ -1,13 +1,12 @@
 import { Routes, Route } from 'react-router-dom';
 
-import ErrorPage from '../Pages/ErrorPage'
 import VentesPage from '../Pages/VentesPage';
 import MentionsPage from '../Pages/MentionsPage';
-import CookiePage from '../Pages/CookiePage';
 import LoginPage from '../Pages/LoginPage';
 import AdminPage from '../Pages/AdminPage';
 import EmployePage from '../Pages/EmployePage';
 import IndexPage from '../Pages/IndexPage';
+import CookiePage from '../Pages/CookiePage';
 
 const AppRoutes = () => {
     return (
@@ -19,7 +18,7 @@ const AppRoutes = () => {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/admin" element={<AdminPage />} />
         <Route path="/employe" element={<EmployePage />} /> 
-        <Route path="*" element={<ErrorPage />} />
+**
     </Routes>
        
     );
