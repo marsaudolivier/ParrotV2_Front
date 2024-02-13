@@ -59,7 +59,7 @@ export function Contact({ selectedAnnonceTitle }) {
   };
   return (
     <>
-      <div className="fluid row">
+      <div className="fluid row ">
         <div className="p-5 para col-12 col-lg-3 mx-auto">
           <div className=" justify-content-center text-center">
             <h2 className="mx-auto ">Nous contacter</h2>
