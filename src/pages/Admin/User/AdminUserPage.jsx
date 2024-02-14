@@ -11,6 +11,16 @@ export default function AdminUserPage() {
   function showHoraires() {
     window.location.href = "/admin/horaires";
   }
+  function showServices() {
+    window.location.href = "/admin/services";
+  }
+  function showCars() {
+    window.location.href = "/admin/cars";
+  }
+  function showContact() {
+    window.location.href = "/admin/contact";
+  }
+  
 
   if (document.cookie.includes("token")) {
     const token = document.cookie.split("=")[1];
@@ -42,7 +52,7 @@ export default function AdminUserPage() {
                 <br />
                 <br />
                 <button
-                  //  onClick={showCars}
+                   onClick={showCars}
                   className="btn btn-outline-danger p-4"
                 >
                   Gestion des Véhicules
@@ -58,7 +68,7 @@ export default function AdminUserPage() {
                 <br />
                 <br />
                 <button
-                  // onClick={showServices}
+                  onClick={showServices}
                   className="btn btn-outline-danger p-4"
                 >
                   Gestion des Services
@@ -66,7 +76,7 @@ export default function AdminUserPage() {
                 <br />
                 <br />
                 <button
-                  // onClick={showContact}
+                  onClick={showContact}
                   className="btn btn-outline-danger p-4"
                 >
                   Gestion des Contact

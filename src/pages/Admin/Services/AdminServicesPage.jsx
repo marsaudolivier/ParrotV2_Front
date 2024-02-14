@@ -1,7 +1,7 @@
 import { Header } from "../../../components/Header";
 import { Footer } from "../../../components/Footer";
 
-export default function AdminHorairePage() {
+export default function AdminServicesPage() {
   function showUsers() {
     window.location.href = "/admin/user";
   }
@@ -32,7 +32,7 @@ export default function AdminHorairePage() {
                   onClick={showUsers}
                   className="btn btn-outline-danger mt-3 p-4"
                 >
-                  Gestion des Utilisateurs
+                  Gestion des Services
                 </button>
                 <br />
                 <br />
@@ -78,18 +78,26 @@ export default function AdminHorairePage() {
                 <br />
               </div>
               <div className="col-10 ">
-                <h2>Gestion des Horaires</h2>
+                <h2>Gestion des Services</h2>
                 <div className="d-flex p-5 justify-content-center">
                   <div className="p-2">
+                  <button
+                      onClick={() => {
+                        window.location.href = "/admin/services/add";
+                      }}
+                      className="btn btn-outline-danger p-4"
+                    >
+                      Ajouter un Service
+                    </button>
                   </div>
                   <div className="p-2">
                     <button
                       onClick={() => {
-                        window.location.href = "/admin/horaires/show";
+                        window.location.href = "/admin/services/show";
                       }}
                       className="btn btn-outline-danger p-4"
                     >
-                      Voir la liste des Horaires
+                      Voir la liste des Services
                     </button>
                   </div>
                 </div>

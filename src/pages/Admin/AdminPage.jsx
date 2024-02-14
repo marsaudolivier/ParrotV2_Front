@@ -15,6 +15,9 @@ export default function AdminPage() {
   function showHoraires() {
   window.location.href = "/admin/horaires";
   }
+  function showServices() {
+  window.location.href = "/admin/services";
+  }
 
 if (document.cookie.includes("token")) {
   const token = document.cookie.split("=")[1];
@@ -62,7 +65,7 @@ if (document.cookie.includes("token")) {
               <br />
               <br />
               <button
-                // onClick={showServices}
+                onClick={showServices}
                 className="btn btn-outline-danger p-4"
               >
                 Gestion des Services

@@ -20,6 +20,11 @@ import AdminAvisDeletePage from '../Pages/Admin/Avis/AdminAvisDeletePage';
 import AdminHorairePage from '../Pages/Admin/Horaire/AdminHorairePage';
 import AdminHoraireShowPage from '../Pages/Admin/Horaire/AdminHoraireShowPage';
 import AdminHoraireShowUpdatePage from '../Pages/Admin/Horaire/AdminHoraireShowUpdatePage';
+import AdminServicesPage from '../Pages/Admin/Services/AdminServicesPage';
+import AdminServicesShowPage from '../Pages/Admin/Services/AdminServicesShowPage';
+import AdminServicesAddPage from '../Pages/Admin/Services/AdminServicesAddPage';
+import AdminServicesDeletePage from '../Pages/Admin/Services/AdminServicesDeletePage';
+
 
 
 
@@ -51,6 +56,11 @@ const AppRoutes = () => {
         <Route path="/admin/horaires/show" element={<AdminHoraireShowPage />} /> 
         <Route path="/admin/horaires/show/:id" element={<AdminHoraireShowUpdatePage />} />
 
+        <Route path="/admin/services" element={<AdminServicesPage />} />
+        <Route path="/admin/services/show" element={<AdminServicesShowPage />} />
+        <Route path="/admin/services/add" element={<AdminServicesAddPage />} />
+        <Route path="/admin/services/delete/:id" element={<AdminServicesDeletePage />} />
+        <Route path="/admin/services/show/:id" element={<AdminAvisShowUpdatePage />} />
 
         <Route path="/employe" element={<EmployePage />} /> 
     </Routes>

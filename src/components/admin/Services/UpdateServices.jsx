@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-export function UpdateAvis() {
+export function UpdateServices() {
 
   const id = window.location.pathname.split("/").pop();
   //on utilise un state pour stocker le user
@@ -36,7 +36,7 @@ export function UpdateAvis() {
     };
     // envoi des données au serveur
     console.log(formData);
-    fetch("https://marsaud.onrender.com/avis/" + id, {
+    fetch("https://marsaud.onrender.com/services/" + id, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
