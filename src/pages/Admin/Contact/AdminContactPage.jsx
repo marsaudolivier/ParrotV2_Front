@@ -1,7 +1,7 @@
 import { Header } from "../../../components/Header";
 import { Footer } from "../../../components/Footer";
 
-export default function AdminServicesPage() {
+export default function AdminContactPage() {
   function showUsers() {
     window.location.href = "/admin/user";
   }
@@ -13,12 +13,6 @@ export default function AdminServicesPage() {
   }
   function showServices() {
     window.location.href = "/admin/services";
-  }
-  function showContact() {
-    window.location.href = "/admin/contact";
-  }
-  function showCars() {
-    window.location.href = "/admin/cars";
   }
 
   if (document.cookie.includes("token")) {
@@ -51,7 +45,7 @@ export default function AdminServicesPage() {
                 <br />
                 <br />
                 <button
-                   onClick={showCars}
+                  //  onClick={showCars}
                   className="btn btn-outline-danger p-4"
                 >
                   Gestion des Véhicules
@@ -75,7 +69,7 @@ export default function AdminServicesPage() {
                 <br />
                 <br />
                 <button
-                  onClick={showContact}
+                  // onClick={showContact}
                   className="btn btn-outline-danger p-4"
                 >
                   Gestion des Contact
@@ -84,26 +78,16 @@ export default function AdminServicesPage() {
                 <br />
               </div>
               <div className="col-10 ">
-                <h2>Gestion des Services</h2>
+                <h2>Gestion des Formulaire de Contact client</h2>
                 <div className="d-flex p-5 justify-content-center">
-                  <div className="p-2">
-                  <button
-                      onClick={() => {
-                        window.location.href = "/admin/services/add";
-                      }}
-                      className="btn btn-outline-danger p-4"
-                    >
-                      Ajouter un Service
-                    </button>
-                  </div>
                   <div className="p-2">
                     <button
                       onClick={() => {
-                        window.location.href = "/admin/services/show";
+                        window.location.href = "/admin/contact/show";
                       }}
                       className="btn btn-outline-danger p-4"
                     >
-                      Voir la liste des Services
+                      Voir la liste des Formulaire de Contact
                     </button>
                   </div>
                 </div>

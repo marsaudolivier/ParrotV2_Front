@@ -7,26 +7,32 @@ import AdminPage from '../Pages/Admin/AdminPage';
 import EmployePage from '../Pages/employe/EmployePage';
 import IndexPage from '../Pages/IndexPage';
 import CookiePage from '../Pages/CookiePage'
+
 import AdminUserPage from '../Pages/Admin/User/AdminUserPage';
 import AdminUserAddPage from '../Pages/Admin/User/AdminUserAddPage';
 import AdminUserShowPage from '../Pages/Admin/User/AdminUserShowPage';
 import AdminUserShowUpdatePage from '../Pages/Admin/User/AdminUserShowUpdatePage';
 import AdminUserDeletePage from '../Pages/Admin/User/AdminUserDeletePage';
+
 import AdminAvisPage from '../Pages/Admin/Avis/AdminAvisPage';
 import AdminAvisAddPage from '../Pages/Admin/Avis/AdminAvisAddPage';
 import AdminAvisShowPage from '../Pages/Admin/Avis/AdminAvisShowPage';
 import AdminAvisShowUpdatePage from '../Pages/Admin/Avis/AdminAvisShowUpdatePage';
 import AdminAvisDeletePage from '../Pages/Admin/Avis/AdminAvisDeletePage';
+
 import AdminHorairePage from '../Pages/Admin/Horaire/AdminHorairePage';
 import AdminHoraireShowPage from '../Pages/Admin/Horaire/AdminHoraireShowPage';
 import AdminHoraireShowUpdatePage from '../Pages/Admin/Horaire/AdminHoraireShowUpdatePage';
+
 import AdminServicesPage from '../Pages/Admin/Services/AdminServicesPage';
 import AdminServicesShowPage from '../Pages/Admin/Services/AdminServicesShowPage';
 import AdminServicesAddPage from '../Pages/Admin/Services/AdminServicesAddPage';
 import AdminServicesDeletePage from '../Pages/Admin/Services/AdminServicesDeletePage';
+import AdminServicesShowUpdatePage from '../Pages/Admin/Services/AdminServicesShowUpdatePage';
 
-
-
+import AdminContactPage from '../Pages/Admin/Contact/AdminContactPage';
+import AdminContactShowPage from '../Pages/Admin/Contact/AdminContactShowPage';
+import AdminContactDeletePage from '../Pages/Admin/Contact/AdminContactDeletePage';
 
 
 
@@ -60,7 +66,12 @@ const AppRoutes = () => {
         <Route path="/admin/services/show" element={<AdminServicesShowPage />} />
         <Route path="/admin/services/add" element={<AdminServicesAddPage />} />
         <Route path="/admin/services/delete/:id" element={<AdminServicesDeletePage />} />
-        <Route path="/admin/services/show/:id" element={<AdminAvisShowUpdatePage />} />
+        <Route path="/admin/services/show/:id" element={<AdminServicesShowUpdatePage />} />
+
+        <Route path="/admin/contact" element={<AdminContactPage />} />
+        <Route path="/admin/contact/show" element={<AdminContactShowPage />} />
+        <Route path="/admin/contact/delete/:id" element={<AdminContactDeletePage />} />
+
 
         <Route path="/employe" element={<EmployePage />} /> 
     </Routes>

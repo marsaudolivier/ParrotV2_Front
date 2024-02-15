@@ -1,11 +1,10 @@
 import { Header } from "../../../components/Header";
 import { Footer } from "../../../components/Footer";
-import { UpdateServices } from "../../../components/admin/Services/UpdateServices";
+import { ShowContact } from "../../../components/admin/Contact/ShowContact";
 
 
 
-
-export default function AdminServicesShowUpdatePage() {
+export default function AdminContactShowPage() {
   if (document.cookie.includes("token")) {
     const token = document.cookie.split("=")[1];
     const payload = token.split(".")[1];
@@ -17,7 +16,7 @@ export default function AdminServicesShowUpdatePage() {
           <Header />
           <button
                     onClick={() => {
-                      window.location.href = "/admin/services";
+                      window.location.href = "/admin/contact";
                     }}
                     className="btn btn-outline-danger p-4"
                   >
@@ -26,7 +25,7 @@ export default function AdminServicesShowUpdatePage() {
           <div className="container-fluid p-5 text-center">
             <div className="row p-3 justify-content-center">
               <div className="col-8 text-center ">
-                <UpdateServices />
+              <ShowContact />  
               </div>
             </div>
           </div>

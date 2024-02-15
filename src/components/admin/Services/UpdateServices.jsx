@@ -1,22 +1,21 @@
 import React, { useState, useEffect } from "react";
 
 export function UpdateServices() {
-
   const id = window.location.pathname.split("/").pop();
   //on utilise un state pour stocker le user
 
-  const [avis, setAvis] = useState(null);
+  const [services, setServices] = useState(null);
   //on utilise une fonction pour récupérer le user correspondant à l'id
 
-  const API_URL = "https://marsaud.onrender.com/avis/" + id;
+  const API_URL = "https://marsaud.onrender.com/services/" + id;
   // The separate async function
-  const getAvis = async () => {
+  const getServices = async () => {
     const response = await fetch(API_URL);
-    const avisData = await response.json();
-    setAvis(avisData);
+    const servicesData = await response.json();
+    setServices(servicesData);
   };
   useEffect(() => {
-    getAvis();
+    getServices();
   }, []);
   // récupération du formulaire
   const handleSudmit = (e) => {
@@ -28,11 +27,9 @@ export function UpdateServices() {
     // console.log(elements);
     // création d'un objet formData
     let formData = {
-      nom: elements.nom.value,
-      prenom: elements.prenom.value,
-      commentaire: elements.commentaire.value,
-      note: elements.note.value,
-      Id_Validations: elements.Id_Validations.value,
+      titre: elements.titre.value,
+      description: elements.description.value,
+      Id_Utilisateurs: 1,
     };
     // envoi des données au serveur
     console.log(formData);
@@ -46,7 +43,7 @@ export function UpdateServices() {
       .then((response) => response.json())
       .then((data) => {
         console.log("Success:", data);
-        window.location.href = "/admin/avis/show";
+        window.location.href = "/admin/services/show";
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -54,84 +51,49 @@ export function UpdateServices() {
     form.reset();
   };
 
-  if (!avis) {
+  if (!services) {
     return <p>Chargement...</p>;
   } else {
     return (
       <>
-      <form onSubmit={handleSudmit}>
-       <div className="row para">
+        <form onSubmit={handleSudmit}>
+          <div className="row para">
             <div className="col-12 col-lg-5 mx-auto">
               <div className="form-group">
-                <label htmlFor="nom">Nom</label>
+                <label htmlFor="titre">titre</label>
                 <input
                   type="text"
                   className="form-control"
-                  id="nom"
-                  placeholder="Nom"
-                  value={avis[0].nom}
+                  id="titre"
+                  placeholder="titre"
+                  value={services[0].titre}
                   onChange={(e) =>
-                    setAvis([{ ...avis[0], nom: e.target.value }])
+                    setServices([{ ...services[0], titre: e.target.value }])
                   }
                 />
-                <label htmlFor="prenom">Prénom</label>
-                <input
-                  type="text"
+                <label htmlFor="description">description</label>
+                <textarea
+                  rows="10"
                   className="form-control"
-                  id="prenom"
-                  placeholder="Prénom"
-                  value={avis[0].prenom}
+                  id="description"
+                  placeholder="description"
+                  value={services[0].description}
                   onChange={(e) =>
-                    setAvis([{ ...avis[0], prenom: e.target.value }])
+                    setServices([
+                      { ...services[0], description: e.target.value },
+                    ])
                   }
                 />
-                <label htmlFor="commentaire">commentaire</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="commentaire"
-                  placeholder="Mot de passe"
-                  value={avis[0].commentaire}
-                  onChange={(e) =>
-                    setAvis([{ ...avis[0], commentaire: e.target.value }])
-                  }
-                />
-                  <label htmlFor="note">note</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="note"
-                  placeholder="Mot de passe"
-                  value={avis[0].note}
-                  onChange={(e) =>
-                    setAvis([{ ...avis[0], note: e.target.value }])
-                  }
-                />
-                <label htmlFor="Id_Validations">Role</label>
-                <select
-                  className="form-select"
-                  id="Id_Validations"
-                  value={avis[0].Id_Validations}
-                  onChange={(e) =>
-                    setAvis([{ ...avis[0], Id_Validations: e.target.value }])
-                  }
-                >
-                  <option value="1">Non valider</option>
-                  <option value="2">Valider</option>
-                </select>
               </div>
             </div>
           </div>
           <div className="p-5">
-          <button type="submit" className="btn btn-outline-danger  p-5">
-                Modifier
-              </button>
+            <button type="submit" className="btn btn-outline-danger  p-5">
+              Modifier
+            </button>
           </div>
         </form>
-
-       
       </>
     );
   }
 }
-

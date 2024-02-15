@@ -17,7 +17,7 @@ export default function AdminHoraireShowPage() {
           <Header />
           <button
                     onClick={() => {
-                      window.location.href = "/admin/user";
+                      window.location.href = "/admin/horaires";
                     }}
                     className="btn btn-outline-danger p-4"
                   >
