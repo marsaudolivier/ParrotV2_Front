@@ -25,6 +25,7 @@ export function ShowAvis() {
             <th scope="col">Note</th>
             <th scope="col">Validation</th>
             {/* bouton pour modifier en récupérant l'id */}
+            <th scope="col">Valider avis</th>
             <th scope="col">Modifier</th>
             <th scope="col">Suprimer</th>
           </tr>
@@ -37,6 +38,48 @@ export function ShowAvis() {
               <td>{avi.commentaire}</td>
               <td>{avi.note}</td>
               <td>{avi.Id_Validations === 1 ? "Non validé" : "validé"}</td>  
+              <td>
+                <button
+                  onClick={() => {
+                    if(avi.Id_Validations ===1){//envoie update  etat a 2 = Non traité
+                      fetch("https://marsaud.onrender.com/avis/" + avi.Id_Avis, {
+                        method: "PUT",
+                        headers: {
+                          "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({Id_Validations:2}),
+                      })
+                        .then((response) => response.json())
+                        .then((data) => {
+                          console.log("Success:", data);
+                          window.location.href = "/admin/avis/show";
+                        })
+                        .catch((error) => {
+                          console.error("Error:", error);
+                        });
+                    }else{
+                      fetch("https://marsaud.onrender.com/avis/" + avi.Id_Avis, {
+                        method: "PUT",
+                        headers: {
+                          "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({Id_Validations:1}),
+                      })
+                        .then((response) => response.json())
+                        .then((data) => {
+                          console.log("Success:", data);
+                          window.location.href = "/admin/avis/show";
+                        })
+                        .catch((error) => {
+                          console.error("Error:", error);
+                        });
+                    }
+                  }}
+                  className="btn btn-outline-danger p-4"
+                >
+                  Switch
+                </button>
+              </td>
               <td>
                 <button
                   onClick={() => {
