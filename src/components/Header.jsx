@@ -38,7 +38,7 @@ export function Header() {
               className="btn btn-secondary btn-sm"
               onClick={() => {
                 document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-                window.location.reload();
+                window.location.href = "/";
               }}
             >
               Déconnexion

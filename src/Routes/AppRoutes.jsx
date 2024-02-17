@@ -34,6 +34,12 @@ import AdminContactPage from '../Pages/Admin/Contact/AdminContactPage';
 import AdminContactShowPage from '../Pages/Admin/Contact/AdminContactShowPage';
 import AdminContactDeletePage from '../Pages/Admin/Contact/AdminContactDeletePage';
 
+import AdminCarsPage from '../Pages/Admin/Cars/AdminCarsPage';
+import AdminCarsShowPage from '../Pages/Admin/Cars/AdminCarsShowPage';
+import AdminCarsDeletePage from '../Pages/Admin/Cars/AdminCarsDeletePage';
+import AdminCarsAddPage from '../Pages/Admin/Cars/AdminCarsAddPage';
+
+
 
 
 const AppRoutes = () => {
@@ -72,6 +78,10 @@ const AppRoutes = () => {
         <Route path="/admin/contact/show" element={<AdminContactShowPage />} />
         <Route path="/admin/contact/delete/:id" element={<AdminContactDeletePage />} />
 
+        <Route path="/admin/cars" element={<AdminCarsPage />} />
+        <Route path="/admin/cars/show" element={<AdminCarsShowPage />} />
+        <Route path="/admin/cars/delete/:id" element={<AdminCarsDeletePage />} />
+        <Route path="/admin/cars/add" element={<AdminCarsAddPage />} />
 
         <Route path="/employe" element={<EmployePage />} /> 
     </Routes>

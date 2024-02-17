@@ -9,14 +9,17 @@ export default function AdminPage() {
     function showAvis() {
   window.location.href = "/admin/avis";
   }
-  // function showCars() {
-  // window.location.href = "/admin/cars";
-  // }
+  function showCars() {
+  window.location.href = "/admin/cars";
+  }
   function showHoraires() {
   window.location.href = "/admin/horaires";
   }
   function showServices() {
   window.location.href = "/admin/services";
+  }
+  function showContact() {
+  window.location.href = "/admin/contact";
   }
 
 if (document.cookie.includes("token")) {
@@ -49,7 +52,7 @@ if (document.cookie.includes("token")) {
               <br />
               <br />
               <button
-                //  onClick={showCars}
+                 onClick={showCars}
                 className="btn btn-outline-danger p-4"
               >
                 Gestion des Véhicules
@@ -73,7 +76,7 @@ if (document.cookie.includes("token")) {
               <br />
               <br />
               <button
-                // onClick={showContact}
+                onClick={showContact}
                 className="btn btn-outline-danger p-4"
               >
                 Gestion des Contact

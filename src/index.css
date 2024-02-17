@@ -11,7 +11,7 @@ article {
   article {
     background-image: url("../public/fond2.jpg");
     background-size: contain;
-    background-attachment: fixed; /* Pour permettre le défilement de l'image sur mobile */
+    background-attachment: fixed; 
   }
 }
 
