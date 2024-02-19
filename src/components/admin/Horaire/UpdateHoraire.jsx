@@ -35,7 +35,7 @@ export function UpdateHoraire() {
     };
     // envoi des données au serveur
     console.log(formData);
-    fetch("https://marsaud.onrender.com/jours/" + id, {
+    fetch("https://marsaudolivier.alwaysdata.net/jours/" + id, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

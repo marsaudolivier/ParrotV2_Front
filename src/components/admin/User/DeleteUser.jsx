@@ -7,7 +7,7 @@ export function DeleteUser() {
   const [user, setUser] = useState(null);
   //on utilise une fonction pour récupérer le user correspondant à l'id
 
-  const API_URL = "https://marsaud.onrender.com/utilisateurs/" + id;
+  const API_URL = "https://marsaudolivier.alwaysdata.net/utilisateurs/" + id;
   // The separate async function
   const getUser = async () => {
     const response = await fetch(API_URL);
@@ -30,7 +30,7 @@ export function DeleteUser() {
    
       <button
         onClick={() => {
-          fetch("https://marsaud.onrender.com/utilisateurs/" + id, {
+          fetch("https://marsaudolivier.alwaysdata.net/utilisateurs/" + id, {
             method: "DELETE",
           })
             .then((response) => response.json())

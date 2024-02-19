@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 export function ShowAvis() {
   const [avis, setAvis] = useState([]);
-  const API_URL = "https://marsaud.onrender.com/avis";
+  const API_URL = "https://marsaudolivier.alwaysdata.net/avis";
 
   // The separate async function
   const getAvis = async () => {
@@ -42,7 +42,7 @@ export function ShowAvis() {
                 <button
                   onClick={() => {
                     if(avi.Id_Validations ===1){//envoie update  etat a 2 = Non traité
-                      fetch("https://marsaud.onrender.com/avis/" + avi.Id_Avis, {
+                      fetch("https://marsaudolivier.alwaysdata.net/avis/" + avi.Id_Avis, {
                         method: "PUT",
                         headers: {
                           "Content-Type": "application/json",
@@ -58,7 +58,7 @@ export function ShowAvis() {
                           console.error("Error:", error);
                         });
                     }else{
-                      fetch("https://marsaud.onrender.com/avis/" + avi.Id_Avis, {
+                      fetch("https://marsaudolivier.alwaysdata.net/avis/" + avi.Id_Avis, {
                         method: "PUT",
                         headers: {
                           "Content-Type": "application/json",

@@ -7,7 +7,7 @@ export function UpdateServices() {
   const [services, setServices] = useState(null);
   //on utilise une fonction pour récupérer le user correspondant à l'id
 
-  const API_URL = "https://marsaud.onrender.com/services/" + id;
+  const API_URL = "https://marsaudolivier.alwaysdata.net/services/" + id;
   // The separate async function
   const getServices = async () => {
     const response = await fetch(API_URL);
@@ -33,7 +33,7 @@ export function UpdateServices() {
     };
     // envoi des données au serveur
     console.log(formData);
-    fetch("https://marsaud.onrender.com/services/" + id, {
+    fetch("https://marsaudolivier.alwaysdata.net/services/" + id, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

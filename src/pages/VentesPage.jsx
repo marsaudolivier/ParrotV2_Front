@@ -13,7 +13,7 @@ export default function VentesPage() {
   const [rangePrice, setRangePrice] = useState([0, 100000]);
   const [Voitures, setVoitures] = useState([]);
   const [selectedAnnonceTitle, setSelectedAnnonceTitle] = useState("");
-  const API_URL = "https://marsaud.onrender.com/annonces/filter";
+  const API_URL = "https://marsaudolivier.alwaysdata.net/annonces/filter";
   // The separate async function
   const getVoitures = async () => {
     try {

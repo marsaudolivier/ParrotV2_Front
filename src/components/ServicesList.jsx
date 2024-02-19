@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export function ServicesList() {
   const [services, setServices] = useState([]);
-  const API_URL = "https://marsaud.onrender.com/services";
+  const API_URL = "https://marsaudolivier.alwaysdata.net/services";
 
   // The separate async function
   const getServices = async () => {

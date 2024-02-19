@@ -7,7 +7,7 @@ export function AddCars() {
   const [energie, setEnergie] = useState([]);
 
   useEffect(() => {
-    fetch("https://marsaud.onrender.com/options", {
+    fetch("https://marsaudolivier.alwaysdata.net/options", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -18,7 +18,7 @@ export function AddCars() {
       .catch((error) => {
         console.error("Error:", error);
       });
-    fetch("https://marsaud.onrender.com/energies", {
+    fetch("https://marsaudolivier.alwaysdata.net/energies", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -29,7 +29,7 @@ export function AddCars() {
       .catch((error) => {
         console.error("Error:", error);
       });
-    fetch("https://marsaud.onrender.com/marque", {
+    fetch("https://marsaudolivier.alwaysdata.net/marque", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -46,7 +46,7 @@ export function AddCars() {
   //Quand marques selectionné alors models de cette marque s'affiche grace a Id_Marques
   const handleChange = (e) => {
     console.log(e.target.value);
-    fetch("https://marsaud.onrender.com/modele/" + e.target.value, {
+    fetch("https://marsaudolivier.alwaysdata.net/modele/" + e.target.value, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -96,7 +96,7 @@ export function AddCars() {
 
     // envoi des données au serveur
     // fetch("http://localhost:3000/annonces/voitures", {
-      fetch("https://marsaud.onrender.com/annonces/voitures", {
+      fetch("https://marsaudolivier.alwaysdata.net/annonces/voitures", {
       method: "POST",
       body: formData,
     })

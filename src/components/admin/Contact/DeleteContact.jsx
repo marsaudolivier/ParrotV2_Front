@@ -8,7 +8,7 @@ export function DeleteContact() {
   const [avis, setAvis] = useState(null);
   //on utilise une fonction pour récupérer le user correspondant à l'id
 
-  const API_URL = "https://marsaud.onrender.com/formulaires/" + id;
+  const API_URL = "https://marsaudolivier.alwaysdata.net/formulaires/" + id;
   // The separate async function
   const getAvis = async () => {
     const response = await fetch(API_URL);
@@ -39,7 +39,7 @@ export function DeleteContact() {
    
       <button
         onClick={() => {
-          fetch("https://marsaud.onrender.com/Formulaires/" + id, {
+          fetch("https://marsaudolivier.alwaysdata.net/Formulaires/" + id, {
             method: "DELETE",
           })
             .then((response) => response.json())

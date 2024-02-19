@@ -1,6 +1,8 @@
 import { Header } from "../../../components/Header";
 import { Footer } from "../../../components/Footer";
 import { AddCars } from "../../../components/admin/Cars/AddCars";
+import { AddOption } from "../../../components/admin/Cars/AddOption";
+
 
 
 export default function AdminCarsAddPage() {
@@ -24,7 +26,8 @@ export default function AdminCarsAddPage() {
           <div className="container-fluid p-5 text-center">
             <div className="row p-3 justify-content-evenly">
               <div className="col-2 text-center">
-                <h2>New marques</h2>
+                <h2>nouvelle option</h2>
+                <AddOption />
               </div>
 
               <div className="col-6 text-center ">

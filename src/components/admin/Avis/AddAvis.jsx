@@ -19,7 +19,7 @@ export function AddAvis() {
     };
     // envoi des données au serveur
     console.log(formData);
-    fetch("https://marsaud.onrender.com/avis", {
+    fetch("https://marsaudolivier.alwaysdata.net/avis", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

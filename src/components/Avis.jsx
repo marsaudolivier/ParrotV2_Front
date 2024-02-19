@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export function Avis() {
   const [Avis, setAvis] = useState([]);
-  const API_URL = "https://marsaud.onrender.com/Avis/last";
+  const API_URL = "https://marsaudolivier.alwaysdata.net/Avis/last";
   const getAvis = async () => {
     const response = await fetch(API_URL);
     const MotifsData = await response.json();
@@ -28,7 +28,7 @@ export function Avis() {
     };
     // envoi des données au serveur
     console.log(formData);
-    fetch("https://marsaud.onrender.com/avis", {
+    fetch("https://marsaudolivier.alwaysdata.net/avis", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

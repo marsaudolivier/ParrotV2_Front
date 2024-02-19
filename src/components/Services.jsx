@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 export function Services() {
   const [Serv, setServ] = useState([]);
   const [services, setServices] = useState([]);
-  const API_URL = "https://marsaud.onrender.com/Services";
+  const API_URL = "https://marsaudolivier.alwaysdata.net/Services";
 
   // The separate async function
   const getServices = async () => {
@@ -18,7 +18,7 @@ export function Services() {
 
   const handleServiceClick = async (id) => {
     console.log("clicked on service with id: " + id);
-    const API_URLServ = `https://marsaud.onrender.com/Services/${id}`;
+    const API_URLServ = `https://marsaudolivier.alwaysdata.net/Services/${id}`;
 
     // The separate async function
     const getServ = async () => {

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export function ContactsList() {
   const [contact, setContact] = useState([]);
-  const API_URL = "https://marsaud.onrender.com/formulaires";
+  const API_URL = "https://marsaudolivier.alwaysdata.net/formulaires";
 
   // The separate async function
   const getContact = async () => {

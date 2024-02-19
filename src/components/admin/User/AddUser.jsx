@@ -19,7 +19,7 @@ export function AddUser() {
     };
     // envoi des données au serveur
     // console.log(formData);
- fetch("https://marsaud.onrender.com/utilisateurs", {
+ fetch("https://marsaudolivier.alwaysdata.net/utilisateurs", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

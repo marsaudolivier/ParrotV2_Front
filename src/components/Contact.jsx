@@ -40,7 +40,7 @@ export function Contact({ selectedAnnonceTitle }) {
     };
     // envoi des données au serveur
     // console.log(formData);
- fetch("https://marsaud.onrender.com/Formulaires", {
+ fetch("https://marsaudolivier.alwaysdata.net/Formulaires", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 export function ShowUser() {
   const [user, setUser] = useState([]);
-  const API_URL = "https://marsaud.onrender.com/utilisateurs";
+  const API_URL = "https://marsaudolivier.alwaysdata.net/utilisateurs";
 
   // The separate async function
   const getUser = async () => {

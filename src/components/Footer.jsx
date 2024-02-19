@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export function Footer() {
   const [Jours, setJours] = useState([]);
-  const API_URL = "https://marsaud.onrender.com/Jours";
+  const API_URL = "https://marsaudolivier.alwaysdata.net/Jours";
 
   // The separate async function
   const getJours = async () => {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 export function ShowServices() {
   const [avis, setAvis] = useState([]);
-  const API_URL = "https://marsaud.onrender.com/services";
+  const API_URL = "https://marsaudolivier.alwaysdata.net/services";
 
   // The separate async function
   const getAvis = async () => {

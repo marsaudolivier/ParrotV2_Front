@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 export function ShowCars() {
   const [avis, setAvis] = useState([]);
-  const API_URL = "https://marsaud.onrender.com/annonces";
+  const API_URL = "https://marsaudolivier.alwaysdata.net/annonces";
 
   // The separate async function
   const getAvis = async () => {
@@ -40,7 +40,7 @@ export function ShowCars() {
               <td>{avi.prix}</td>
               <td>{avi.marque}</td>
               <td>{avi.modele}</td>
-              <td><img src={`https://marsaud.onrender.com/public/images/${avi.photo_principal}`} alt="car" width="100" /></td>
+              <td><img src={`https://marsaudolivier.alwaysdata.net/public/images/${avi.photo_principal}`} alt="car" width="100" /></td>
 
             
               <td>

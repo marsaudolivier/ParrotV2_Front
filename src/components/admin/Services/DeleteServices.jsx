@@ -8,7 +8,7 @@ export function DeleteServices() {
   const [avis, setAvis] = useState(null);
   //on utilise une fonction pour récupérer le user correspondant à l'id
 
-  const API_URL = "https://marsaud.onrender.com/services/" + id;
+  const API_URL = "https://marsaudolivier.alwaysdata.net/services/" + id;
   // The separate async function
   const getAvis = async () => {
     const response = await fetch(API_URL);

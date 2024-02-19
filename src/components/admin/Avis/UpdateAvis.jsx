@@ -8,7 +8,7 @@ export function UpdateAvis() {
   const [avis, setAvis] = useState(null);
   //on utilise une fonction pour récupérer le user correspondant à l'id
 
-  const API_URL = "https://marsaud.onrender.com/avis/" + id;
+  const API_URL = "https://marsaudolivier.alwaysdata.net/avis/" + id;
   // The separate async function
   const getAvis = async () => {
     const response = await fetch(API_URL);
@@ -36,7 +36,7 @@ export function UpdateAvis() {
     };
     // envoi des données au serveur
     console.log(formData);
-    fetch("https://marsaud.onrender.com/avis/" + id, {
+    fetch("https://marsaudolivier.alwaysdata.net/avis/" + id, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export function HorairesList() {
   const [horaires, setHoraires] = useState([]);
-  const API_URL = "https://marsaud.onrender.com/jours";
+  const API_URL = "https://marsaudolivier.alwaysdata.net/jours";
 
   // The separate async function
   const getHoraires = async () => {

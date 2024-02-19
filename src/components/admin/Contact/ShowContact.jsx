@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 export function ShowContact() {
   const [avis, setAvis] = useState([]);
-  const API_URL = "https://marsaud.onrender.com/formulaires";
+  const API_URL = "https://marsaudolivier.alwaysdata.net/formulaires";
 
   // The separate async function
   const getAvis = async () => {
@@ -46,7 +46,7 @@ export function ShowContact() {
                 <button
                   onClick={() => {
                     if(avi.Id_FormulairesOk ===1){//envoie update  etat a 2 = Non traité
-                      fetch("https://marsaud.onrender.com/formulaires/" + avi.Id_Formulaires, {
+                      fetch("https://marsaudolivier.alwaysdata.net/formulaires/" + avi.Id_Formulaires, {
                         method: "PUT",
                         headers: {
                           "Content-Type": "application/json",
@@ -63,7 +63,7 @@ export function ShowContact() {
                         });
                       
                     }else{
-                      fetch("https://marsaud.onrender.com/formulaires/" + avi.Id_Formulaires, {
+                      fetch("https://marsaudolivier.alwaysdata.net/formulaires/" + avi.Id_Formulaires, {
                         method: "PUT",
                         headers: {
                           "Content-Type": "application/json",

@@ -8,7 +8,7 @@ export function DeleteCars() {
   const [avis, setAvis] = useState(null);
   //on utilise une fonction pour récupérer le user correspondant à l'id
 
-  const API_URL = "https://marsaud.onrender.com/annonces/" + id;
+  const API_URL = "https://marsaudolivier.alwaysdata.net/annonces/" + id;
   // The separate async function
   const getAvis = async () => {
     const response = await fetch(API_URL);
@@ -32,7 +32,7 @@ export function DeleteCars() {
       <p>Note : {avis[0].prix}</p>
       <p>Marque : {avis[0].marque}</p>
       <p>Modele : {avis[0].modele}</p>
-      <p>Photo : <img src={`https://marsaud.onrender.com/public/images/${avis[0].photo_principal}`} alt="car" width="100" /></p>
+      <p>Photo : <img src={`https://marsaudolivier.alwaysdata.net/public/images/${avis[0].photo_principal}`} alt="car" width="100" /></p>
       </div>
    
    
@@ -44,7 +44,7 @@ export function DeleteCars() {
           //On envoie la requête DELETE vers le serveur avec les données du formula
           // fetch("http://localhost:3000/annonces/" + id, {
 
-          fetch("https://marsaud.onrender.com/annonces/" + id, {
+          fetch("https://marsaudolivier.alwaysdata.net/annonces/" + id, {
             method: "DELETE",
             body: formData,
           })

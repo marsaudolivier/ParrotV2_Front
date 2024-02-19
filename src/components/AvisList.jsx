@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export function AvisList() {
   const [avis, setAvis] = useState([]);
-  const API_URL = "https://marsaud.onrender.com/avis";
+  const API_URL = "https://marsaudolivier.alwaysdata.net/avis";
 
   // The separate async function
   const getAvis = async () => {

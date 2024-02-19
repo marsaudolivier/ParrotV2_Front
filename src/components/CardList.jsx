@@ -9,7 +9,7 @@ const CardList = ({ voitures, setSelectedAnnonceTitle  }) => {
 
   const handleMoreInfoClick = async (idAnnonces, titreAnnonce) => {
     console.log("clicked on service with id: " + idAnnonces);
-    const API_URLServ = `https://marsaud.onrender.com/Annonces/voiture/${idAnnonces}`;
+    const API_URLServ = `https://marsaudolivier.alwaysdata.net/Annonces/voiture/${idAnnonces}`;
 
     try {
       const responseServ = await fetch(API_URLServ);
@@ -17,13 +17,13 @@ const CardList = ({ voitures, setSelectedAnnonceTitle  }) => {
       setServ(ServData);
       console.log(ServData);
 
-      const API_URLAvoir = `https://marsaud.onrender.com/avoir/${idAnnonces}`;
+      const API_URLAvoir = `https://marsaudolivier.alwaysdata.net/avoir/${idAnnonces}`;
       const responseAvoir = await fetch(API_URLAvoir);
       const AvoirData = await responseAvoir.json();
       setAvoir(AvoirData);
       console.log(AvoirData);
 
-      const API_URLConso = `https://marsaud.onrender.com/consommer/${idAnnonces}`;
+      const API_URLConso = `https://marsaudolivier.alwaysdata.net/consommer/${idAnnonces}`;
       const responseConso = await fetch(API_URLConso);
       const ConsoData = await responseConso.json();
       setConso(ConsoData);
@@ -51,7 +51,7 @@ const CardList = ({ voitures, setSelectedAnnonceTitle  }) => {
                 <div className="card_vente p-2">
                   <h3>{voiture.titre}</h3>
                   <img
-                    src={`https://marsaud.onrender.com/public/images/${voiture.photo_principal}`}
+                    src={`https://marsaudolivier.alwaysdata.net/public/images/${voiture.photo_principal}`}
                     alt="Photo principale"
                     className="Vente_Photo"
                   />
@@ -84,7 +84,7 @@ const CardList = ({ voitures, setSelectedAnnonceTitle  }) => {
               <div className="row justify-content-around">
                 <div className="col-3">
                 <img
-                    src={`https://marsaud.onrender.com/public/images/${se.photo_principal}`}
+                    src={`https://marsaudolivier.alwaysdata.net/public/images/${se.photo_principal}`}
                     alt="Photo principale"
                     className="Vente_PhotoDetail"
                   />

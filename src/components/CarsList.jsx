@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export function CarsList() {
   const [cars, setCars] = useState([]);
-  const API_URL = "https://marsaud.onrender.com/annonces";
+  const API_URL = "https://marsaudolivier.alwaysdata.net/annonces";
 
   // The separate async function
   const getCars = async () => {
@@ -39,7 +39,7 @@ export function CarsList() {
               <td>{car.annee}</td>
               <td>{car.kilometrage}</td>
               <td>{car.prix}</td>
-              <td><img src={`https://marsaud.onrender.com/public/images/${car.photo_principal}`} alt="car" width="100" /></td>
+              <td><img src={`https://marsaudolivier.alwaysdata.net/public/images/${car.photo_principal}`} alt="car" width="100" /></td>
               <td><a href={`/admin/cars/${car.Id_Annonces}`}><button type="button" className="btn btn-primary">Voir</button></a></td>
             </tr>
           ))}
