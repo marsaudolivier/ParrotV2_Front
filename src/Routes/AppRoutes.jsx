@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 
-import IndexPage from './Pages/IndexPage';
-import VentesPage from './Pages/VentesPage';
+import IndexPage from '../Pages/IndexPage.jsx';
+import VentesPage from '../Pages/VentesPage.jsx';
 import MentionsPage from '../Pages/MentionsPage';
 import LoginPage from '../Pages/LoginPage';
 import AdminPage from '../Pages/Admin/AdminPage';
