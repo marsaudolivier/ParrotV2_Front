@@ -10,7 +10,7 @@ export default function AdminAvisShowUpdatePage() {
     const payload = token.split(".")[1];
     const data = JSON.parse(atob(payload));
 
-    if (data.Id_Roles === 1) {
+    if (data.Id_Roles === 1 || data.Id_Roles === 2) {
       return (
         <>
           <Header />

@@ -13,13 +13,13 @@ export default function AdminAvisAddPage() {
     const payload = token.split(".")[1];
     const data = JSON.parse(atob(payload));
 
-    if (data.Id_Roles === 1) {
+    if (data.Id_Roles === 1 || data.Id_Roles === 2) {
       return (
         <>
           <Header />
           <button
                     onClick={() => {
-                      window.location.href = "/admin/user";
+                      window.location.href = "/admin/avis";
                     }}
                     className="btn btn-outline-danger p-4"
                   >

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export function AddOption() {
+export function AddMarque() {
   // récupération du formulaire
   const handleSudmit = (e) => {
     e.preventDefault();
@@ -12,12 +12,12 @@ export function AddOption() {
     // création d'un objet formData
     let formData = {
 
-      optionn: elements.optionn.value,
+      marque: elements.marque.value,
     
     };
     // envoi des données au serveur
     console.log(formData);
-    fetch("https://marsaudolivier.alwaysdata.net/options", {
+    fetch("https://marsaudolivier.alwaysdata.net/marque/add", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -40,12 +40,12 @@ export function AddOption() {
         <div className="row">
           <div className="col-6 col-lg-5 mx-auto">
             <div className="form-group">
-              <label htmlFor="optionn">option</label>
+              <label htmlFor="marque">Nouvelle marques</label>
               <input
                 type="text"
                 className="form-control"
-                id="optionn"
-                placeholder="option"
+                id="marque"
+                placeholder="Nouvelle marques"
               />
             </div>
           </div>

@@ -1,6 +1,22 @@
 import { useEffect, useState } from "react";
 
-export function AddOption() {
+export function AddModele() {
+  const [marques, setMarques] = useState([]);
+
+  useEffect(() => {
+    fetch("https://marsaudolivier.alwaysdata.net/marque", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => setMarques(data))
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  }, []);
+
   // récupération du formulaire
   const handleSudmit = (e) => {
     e.preventDefault();
@@ -11,13 +27,12 @@ export function AddOption() {
     // console.log(elements);
     // création d'un objet formData
     let formData = {
-
-      optionn: elements.optionn.value,
-    
+      Id_Marques: elements.marque.value,
+      modele: elements.modele.value,
     };
     // envoi des données au serveur
     console.log(formData);
-    fetch("https://marsaudolivier.alwaysdata.net/options", {
+    fetch("https://marsaudolivier.alwaysdata.net/modele/add", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -37,15 +52,31 @@ export function AddOption() {
   return (
     <>
       <form onSubmit={handleSudmit}>
+        <div className="mb-3">
+          {/* récupération de totue les marque avec fetch */}
+          <div className="col-12 col-lg-4 mx-auto">
+            <div className="form-group">
+              <label htmlFor="marque">marque</label>
+              <select className="form-control" id="marque">
+                <option value="500">Choisir une marque</option>
+                {marques.map((marque) => (
+                  <option key={marque.Id_Marques} value={marque.Id_Marques}>
+                    {marque.marque}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+        </div>
         <div className="row">
           <div className="col-6 col-lg-5 mx-auto">
             <div className="form-group">
-              <label htmlFor="optionn">option</label>
+              <label htmlFor="modele">Nouvelle modele</label>
               <input
                 type="text"
                 className="form-control"
-                id="optionn"
-                placeholder="option"
+                id="modele"
+                placeholder="Nouvelle modele"
               />
             </div>
           </div>

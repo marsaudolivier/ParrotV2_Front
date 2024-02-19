@@ -42,6 +42,8 @@ import AdminCarsAddPage from '../Pages/Admin/Cars/AdminCarsAddPage';
 
 
 
+
+
 const AppRoutes = () => {
     return (
       <Routes>
@@ -84,6 +86,11 @@ const AppRoutes = () => {
         <Route path="/admin/cars/add" element={<AdminCarsAddPage />} />
 
         <Route path="/employe" element={<EmployePage />} /> 
+
+
+
+        
+
     </Routes>
        
     );

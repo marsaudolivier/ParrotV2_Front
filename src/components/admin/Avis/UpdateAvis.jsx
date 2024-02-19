@@ -46,7 +46,9 @@ export function UpdateAvis() {
       .then((response) => response.json())
       .then((data) => {
         console.log("Success:", data);
+        
         window.location.href = "/admin/avis/show";
+  
       })
       .catch((error) => {
         console.error("Error:", error);
