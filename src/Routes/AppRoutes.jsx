@@ -1,11 +1,11 @@
 import { Routes, Route } from 'react-router-dom';
 
+import IndexPage from '../Pages/IndexPage';
 import VentesPage from '/src/Pages/VentesPage';
 import MentionsPage from '../Pages/MentionsPage';
 import LoginPage from '../Pages/LoginPage';
 import AdminPage from '../Pages/Admin/AdminPage';
 import EmployePage from '../Pages/employe/EmployePage';
-import IndexPage from '../Pages/IndexPage';
 import CookiePage from '../Pages/CookiePage'
 
 import AdminUserPage from '../Pages/Admin/User/AdminUserPage';
