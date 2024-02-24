@@ -8,14 +8,11 @@ $info: #5cb8ff;
 body {
   font-family: "Aref Ruqaa Ink", serif !important;
 }
-.logo {
-  width: 250px;
-}
+// 
 .title {
   font-size: 4rem;
   font-weight: 1700;
   color: $success;
-
   text-align: center;
 }
 .navText {
@@ -28,6 +25,11 @@ body {
   color: $primary;
   border-radius: 10rem;
   font-size: 1.6rem;
+}
+@media (max-width: 768px) {
+  .para {
+   font-size: 1.2rem;
+  }
 }
 .para_error {
   background-color: $secondary;
@@ -68,6 +70,18 @@ h4 {
   color: $danger !important;
   text-align: center;
 }
+@media (max-width: 768px) {
+  .h1 {
+    font-size: 20px !important;
+  }
+  .h2 {
+    font-size: 30px !important;
+  }
+  h3, h4 {
+    font-size: 20px !important;
+  }
+    
+}
 .card_vente {
   border-radius: 50px !important;
   background-color: $secondary !important;
@@ -76,6 +90,7 @@ h4 {
   border: 1px solid $danger !important;
   font-size: 1.4rem;
 }
+
 .card_detail {
   border-radius: 50px !important;
   color: $primary !important;
@@ -83,12 +98,13 @@ h4 {
   font-size: 1.5rem;
 }
 .Vente_Photo {
-  height: 200px;
-  width: 320px;
+  width: 100%;
+  height: 300px;
   object-fit: cover;
   border-radius: 40px !important;
   border: 3px solid $danger !important;
 }
+
 .Vente_PhotoDetail {
   height: 400px;
   width: 400px;
@@ -96,6 +112,17 @@ h4 {
   border-radius: 40px !important;
   border: 3px solid $danger !important;
 }
+//responsive
+@media (max-width: 768px) {
+  .Vente_Photo {
+    height: 200px;
+  }
+  .Vente_PhotoDetail {
+    height: 250px;
+    width: 250px;
+  }
+}
+
 
 body {
   background-color: $secondary !important;

@@ -59,21 +59,22 @@ export function Contact({ selectedAnnonceTitle }) {
   };
   return (
     <>
-      <div className="fluid row ">
-        <div className="p-5 para col-12 col-lg-3 mx-auto">
+      <div className="d-flex mt-5">
+        <div className="mt-5"></div>
+        <div className="p-5 para col-11 col-lg-3 mx-auto">
           <div className=" justify-content-center text-center">
             <h2 className="mx-auto ">Nous contacter</h2>
             <div>
               <div className="">
-                <p className="mt-5">Par téléphone : 01 23 45 67 89</p>
-                <p className="mt-5">Par fax : 01 23 45 67 89</p>
-                <p className="mt-5">Par mail : contact@monsite.fr</p>
+                <p className="mt-3">Par téléphone : 01 23 45 67 89</p>
+                <p className="mt-3">Par fax : 01 23 45 67 89</p>
+                <p className="mt-3">Par mail : contact@monsite.fr</p>
               </div>
             </div>
           </div>
         </div>
         <div className="p-2  d-lg-none"></div>
-        <div className="p-5 para col-12 col-lg-8">
+        <div className="p-5 para col-11 col-lg-8  mx-auto">
           <h2 className="  ">Formulaire</h2>
           <form onSubmit={handleSudmit}>
             <div className="row">

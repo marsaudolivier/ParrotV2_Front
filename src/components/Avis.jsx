@@ -53,9 +53,9 @@ export function Avis() {
             </div>
           </div>
         </div>
-        <div className="row justify-content-evenly text-center">
+        <div className=" d-flex justify-content-evenly text-center">
               {Avis.map((Avi) => (
-              <div className="col-4 para">
+              <div className="col-5 para">
                 <div key={Avi.Id_Avis}>
                   <div className="p-2">
                     <p>

@@ -10,11 +10,9 @@ export function ServicesList() {
     const servicesData = await response.json();
     setServices(servicesData);
   };
-
   useEffect(() => {
     getServices();
   }, []);
-
   return (
     <div>
       <h2>Gestion des services</h2>
@@ -28,7 +26,7 @@ export function ServicesList() {
         <tbody>
           {services.map((service) => (
             <tr scope="row" key={service.Id_Services}>
-              <td >{service.titre}</td>
+              <td>{service.titre}</td>
               <td>{service.description}</td>
             </tr>
           ))}
@@ -36,7 +34,6 @@ export function ServicesList() {
       </table>
     </div>
   );
-
 }
 
 export default ServicesList;

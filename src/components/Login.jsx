@@ -54,7 +54,7 @@ export function Login() {
   return (
     <div className="container p-5">
       <div className="row para p-5">
-        <div className="col-6  mx-auto  text-center p-4">
+        <div className="col-12 col-md-6  mx-auto  text-center p-4">
           <h1>Connexion</h1>
           <form onSubmit={handleSubmit}>
             <div className="form-group">

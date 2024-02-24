@@ -1,9 +1,9 @@
 export function WhoAreWe() {
   return (
     <>
-      <div className=" fluid p-5 ">
-        <div className="p-5 para">
-          <h2>Qui Somme-Nous?</h2>
+        <div className="">
+        <div className="p-2 para col-11 col-md-10 mx-auto">
+          <h2 className="mt-5">Qui Somme-Nous?</h2>
           <p>
             Vous cherchez un garage de confiance pour entretenir, réparer ou
             vendre votre voiture ? Ne cherchez plus ! Garage V. Parrot est là
@@ -64,8 +64,9 @@ export function WhoAreWe() {
             savoir plus sur nos services. Nous sommes impatients de vous
             accueillir dans notre atelier et de prendre soin de votre voiture.
           </p>{" "}
+          <div className="p-5"></div>
         </div>
-      </div>
+      </div>  
     </>
   );
 }

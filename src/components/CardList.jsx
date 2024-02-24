@@ -15,19 +15,19 @@ const CardList = ({ voitures, setSelectedAnnonceTitle  }) => {
       const responseServ = await fetch(API_URLServ);
       const ServData = await responseServ.json();
       setServ(ServData);
-      console.log(ServData);
+      // console.log(ServData);
 
       const API_URLAvoir = `https://marsaudolivier.alwaysdata.net/avoir/${idAnnonces}`;
       const responseAvoir = await fetch(API_URLAvoir);
       const AvoirData = await responseAvoir.json();
       setAvoir(AvoirData);
-      console.log(AvoirData);
+      // console.log(AvoirData);
 
       const API_URLConso = `https://marsaudolivier.alwaysdata.net/consommer/${idAnnonces}`;
       const responseConso = await fetch(API_URLConso);
       const ConsoData = await responseConso.json();
       setConso(ConsoData);
-      console.log(ConsoData);
+      // console.log(ConsoData);
       setSelectedAnnonceTitle(titreAnnonce);
       setIsButtonClicked(true);
     } catch (error) {
@@ -43,10 +43,10 @@ const CardList = ({ voitures, setSelectedAnnonceTitle  }) => {
     // Utilisez l'état pour conditionner le rendu
     return (
       <>
-        <div className="container p-5">
+        <div className="container-md">
           <div className="row">
             {voitures.map((voiture) => (
-              <div className="col-12 col-md-4 text-center" key={voiture.id}>
+              <div className="col-12 col-md-6 col-xl-4 text-center" key={voiture.id}>
                 <div className="p-2"></div>
                 <div className="card_vente p-2">
                   <h3>{voiture.titre}</h3>
@@ -80,16 +80,16 @@ const CardList = ({ voitures, setSelectedAnnonceTitle  }) => {
         {Serv.map((se) => (
           <div key={se.Id_Services}>
             <div className="p-2 para text-center">
-              <h2>{se.titre}</h2>
-              <div className="row justify-content-around">
-                <div className="col-3">
+              <h2 className="mt-5">{se.titre}</h2>
+              <div className="row justify-content-around d-md-flex d-sm-block">
+                <div className="col-11 col-md-3 mt-5">
                 <img
                     src={`https://marsaudolivier.alwaysdata.net/public/images/${se.photo_principal}`}
                     alt="Photo principale"
                     className="Vente_PhotoDetail"
                   />
                 </div>
-                <div className="col-3 card_detail">
+                <div className="col-11 col-md-3  mt-3 card_detail">
                   <h3>détail</h3>
                   <p>Prix:{se.prix} €</p>
                   <p> Année:{se.annee}</p>
@@ -97,7 +97,7 @@ const CardList = ({ voitures, setSelectedAnnonceTitle  }) => {
                   <p> Marques:{se.marque}</p>
                   <p> Modèle:{se.modele}</p>
                 </div>
-                <div className="col-3 card_detail">
+                <div className="col-11 col-md-3 mt-3 card_detail">
                   <h3>Energie</h3>
                   {Conso.map((consom) => (
                     <div key={consom.Id_Avoir}>
@@ -116,7 +116,7 @@ const CardList = ({ voitures, setSelectedAnnonceTitle  }) => {
                   ))}
                 </div>
               </div>
-              <button className="btn btn-dark " onClick={handleBackClick}>
+              <button className="btn btn-dark mt-5" onClick={handleBackClick}>
                 Retour
               </button>
             </div>

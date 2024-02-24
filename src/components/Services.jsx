@@ -37,23 +37,27 @@ export function Services() {
   if (Serv.length === 0) {
     return (
       <>
-        <div className="fluid p-5 ">
-          <div className="p-5 para col-12 col-lg-5 mx-auto">
-            <div className="d-flex  justify-content-center">
-              <h2 className="mx-auto m-auto">Services</h2>
-              <div>
-                {services.map((service) => (
-                  <div key={service.Id_Services}>
-                    <div className="p-2">
-                      <button
-                        className="btn btn-dark text-center col-12 col-md-11"
-                        onClick={() => handleServiceClick(service.Id_Services)}
-                      >
-                        {service.titre}
-                      </button>
+        <div className="mt-5">
+          <div className="p-2">
+            <div className="p-5 para col-12  col-md-10  mx-auto">
+              <div className="d-sm-flex  justify-content-center">
+                <h2 className="mx-auto m-auto">Services</h2>
+                <div>
+                  {services.map((service) => (
+                    <div key={service.Id_Services}>
+                      <div className="p-2">
+                        <button
+                          className="btn btn-dark text-center col-12 col-md-11"
+                          onClick={() =>
+                            handleServiceClick(service.Id_Services)
+                          }
+                        >
+                          {service.titre}
+                        </button>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -63,17 +67,17 @@ export function Services() {
   } else {
     return (
       <>
-        <div className="fluid p-5">
-          <div className="p-5 para text-center">
+        <div className="mt-5">
+          <div className="p-2 mt-5 para text-center">
             {Serv.map((se) => (
               <div key={se.Id_Services}>
-                <div className="p-2">
+                <div className="mt-5">
                   <h2>{se.titre}</h2>
-                  <p>{se.description}</p>
+                  <p className="mt-5">{se.description}</p>
                 </div>
               </div>
             ))}
-            <button className="btn btn-dark" onClick={handleBackClick}>
+            <button className="btn btn-dark mb-5" onClick={handleBackClick}>
               Retour
             </button>
           </div>
