@@ -17,17 +17,17 @@ export function Header() {
                     className="nav-link px-2 text-secondary"
                     aria-current="page"
                   >
-                    <i class="bi bi-house">Acceuil </i>
+                    <i class="bi bi-house"> </i>Acceuil
                   </a>
                 </li>
                 <li className="nav-item">
                   <a href="/ventes" className="nav-link text-secondary">
-                  <i class="bi bi-car-front">Ventes </i>
+                  <i class="bi bi-car-front"> </i>Ventes
                   </a>
                 </li>
                 <li className="nav-item">
                   <a href="/login" className="nav-link text-secondary">
-                  <i class="bi bi-dash-circle">Administration du site</i>
+                  <i class="bi bi-dash-circle"></i>Administration du site
                   </a>
                 </li>
               </ul>
@@ -61,17 +61,17 @@ export function Header() {
                   className="nav-link px-2 text-secondary"
                   aria-current="page"
                 >
-                  <i class="bi bi-house">Acceuil </i>
+                  <i class="bi bi-house"> </i>Acceuil
                 </a>
               </li>
               <li className="nav-item">
                 <a href="/ventes" className="nav-link text-secondary">
-                <i class="bi bi-car-front">Ventes </i>
+                <i class="bi bi-car-front"> </i>Ventes
                 </a>
               </li>
               <li className="nav-item">
                 <a href="/login" className="nav-link text-secondary">
-                <i class="bi bi-dash-circle">Administration du site</i>
+                <i class="bi bi-dash-circle"></i>Administration du site
                 </a>
               </li>
             </ul>

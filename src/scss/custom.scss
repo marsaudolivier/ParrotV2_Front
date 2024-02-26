@@ -153,3 +153,15 @@ body {
 .stars{
   width: 40%;
 }
+.bi{
+  color: $success;
+}
+//carte ventes hover
+.card_vente:hover {
+  border: 3px solid $danger !important;
+  box-shadow: 0 0 10px $danger !important;
+  font-size: 1.4rem;
+  .Vente_Photo{
+    border: 3px solid $danger !important;
+  }
+}
