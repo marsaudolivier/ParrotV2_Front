@@ -44,35 +44,29 @@ export function Avis() {
       });
       form.reset();
   }
-  return (
+  return  (
     <>
       <div className="fluid p-5 ">
         <div className="p-5 para col-12 col-lg-5 mx-auto">
           <div className="justify-content-center">
             <h2 className="mx-auto m-auto">Avis</h2>
-            </div>
           </div>
         </div>
-        <div className=" d-flex justify-content-evenly text-center">
-              {Avis.map((Avi) => (
-              <div className="col-5 para">
-                <div key={Avi.Id_Avis}>
-                  <div className="p-2">
-                    <p>
-                       Nom: {Avi.nom}
-                    </p>
-                    <p>
-                       Prénom :{Avi.prenom}
-                    </p>
-                    <p>
-                        Commentaire: {Avi.commentaire}
-                    </p>
-                    <img src={'/etoile' + Avi.note + '.svg'} alt="Étoile" className="stars"/>
-                    <br />  <br />
-                  </div>
-                </div>
-                </div>
-              ))}
+      </div>
+      <div className="d-flex justify-content-evenly text-center">
+        {Avis.filter((Avi) => Avi.Id_Validations === 2).map((Avi) => (
+          <div className="col-5 col-md-3 para" key={Avi.Id_Avis}>
+            <div className="p-2 mt-2">
+              <p>Nom: {Avi.nom}</p>
+              <p>Prénom: {Avi.prenom}</p>
+              <p>Commentaire: {Avi.commentaire}</p>
+              <img src={'/etoile' + Avi.note + '.svg'} alt="Étoile" className="stars" />
+              <br /> <br />
+            </div>
+          </div>
+        ))}
+              
+
             </div>
 {/*  /ajout un bouton pour mettre avis  */}
 
