@@ -67,7 +67,8 @@ export function Avis() {
                     <p>
                         Commentaire: {Avi.commentaire}
                     </p>
-                    Note:  {Avi.note}/5<br />
+                    <img src={'/etoile' + Avi.note + '.svg'} alt="Étoile" className="stars"/>
+                    <br />  <br />
                   </div>
                 </div>
                 </div>

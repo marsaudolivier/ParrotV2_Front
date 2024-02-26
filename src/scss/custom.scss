@@ -23,7 +23,7 @@ body {
   background-color: $secondary;
   opacity: 0.92;
   color: $primary;
-  border-radius: 10rem;
+  border-radius: 5rem;
   font-size: 1.6rem;
 }
 @media (max-width: 768px) {
@@ -150,3 +150,6 @@ body {
   font-size: 30px;
 }
 
+.stars{
+  width: 40%;
+}

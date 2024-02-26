@@ -38,7 +38,7 @@ export default function VentesPage() {
       console.error("Erreur lors de la récupération des données", error);
     }
   };
-  console.log(Voitures);
+  // console.log(Voitures);
   useEffect(() => {
     getVoitures();
   }, []);

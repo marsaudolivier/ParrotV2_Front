@@ -59,7 +59,7 @@ export function Contact({ selectedAnnonceTitle }) {
   };
   return (
     <>
-      <div className="d-flex mt-5">
+      <div className="d-md-flex mt-5">
         <div className="mt-5"></div>
         <div className="p-5 para col-11 col-lg-3 mx-auto">
           <div className=" justify-content-center text-center">
