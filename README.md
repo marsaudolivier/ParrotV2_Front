@@ -1,8 +1,26 @@
-# React + Vite
+# ECF MARSAUD Olivier
+Bonjour mon Nom est Marsaud Olivier, Actuellement en train de préparé ma certification DWWM.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ce "site", est mon ECF, sur le sujet garage de mr V Parrot. La version 2 en REACT
 
-Currently, two official plugins are available:
+## Résumé du projet:
+Dans le cadre de cette ECF, il nous à été demandé de réaliser une application web complète. Cette application est un Site web pour le Garage de Mr Vincent Parrot . Après 15 ans d’expérience, il vient ouvrir son garage et me demande donc de lui ouvrir les portes du Web. L’application que je vais donc lui proposer, mettra donc en avant sont savoir faire et tout particulièrement les services proposés par ce dernier. Le client veut avoir accès sur la modification de ces services par le biais d’un panel administrateur qu’il sera le seul à avoir accès. De plus, en cas de changement horaire le client veut aussi la possibilité de les mettre à jour. Mr Parrot veut aussi que c’est client puissent donnée leur avis sur son travail ainsi que le contacté à tout moment via un formulaire de contact, ainsi que c’est donné de contact présente sur tous les pages du site. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Pour faciliter la vente de véhicule, part importante du garage, j’ai aussi intégré une page permettant de visualiser et contacté de façon rapide le garage pour chaque annonce. Pour faciliter la navigation, à la demande du client j’ai intégré un filtre sur les kilomètres, l’année de mise en circulation et pour finir sur le prix. Le client m’a demandé que ce panel soit géré par c’est employé, pour ceux faire, la création d’employé sera exclusivement soumise à Mr Parrot via son compte administrateur. 
+
+## Site déployé
+
+Vous trouverez le site déployé sur alwaysdata a l'adresse suivante:
+
+https://ecfparrotv2-3bphjzfh5-marsaudoliviers-projects.vercel.app/
+
+## Technologie
+Le site est développé avec les technologies suivantes:
+* HTML 5
+* CSS 3 (Bootstrap 4)
+* REACT
+
+## Authors
+
+- [@Marsaudolivier](https://github.com/marsaudolivier)
+
